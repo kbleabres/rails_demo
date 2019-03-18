@@ -37,11 +37,7 @@ psql rails_demo_development < data/rails_demo_seed_20190205.dump
   SCOUT_DEV_TRACE=true rails server
 ```
 
-# [TOKYO RUBYIST MEETUP 2019-02-06](https://trbmeetup.doorkeeper.jp/events/85868) Pair Programming session
-
 ### Migrating to fast_jsonapi
-
-As mentioned in the presentation, fast_jsonapi is a high performance JSON::API serializer. Let's try migrating to it.
 
 The [fast_jsonapi documentation](https://github.com/Netflix/fast_jsonapi) provides a good overview of how to use it.
 
@@ -60,12 +56,3 @@ Once you've migrated the application to use fast_jsonapi, you can compare the pe
     rails runner "require 'performance_test'; PerformanceTest.run"
 
 Now's a great chance to talk with your partner about the two approaches. What do you think of the difference in strategies? Do you prefer the more object oriented approach of fast_jsonapi or the declarative approach of jbuilder? What do you think of JSON::API vs the json that jbuilder produces?
-
-## Find additional performance issues
-
-We've deployed this application, sent some sample requests to it, and created a shared Scout account you can use.  Login from [https://scoutapp.com/users/sign_in](https://scoutapp.com/users/sign_in) with the credentials:
-
-    - username: rails_demo@scoutapp.com
-    - password: password
-
-Browse through the results there, and then dive into any other performance issues you can identify.
